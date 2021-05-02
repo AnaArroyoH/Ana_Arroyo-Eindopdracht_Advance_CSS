@@ -1,0 +1,246 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.35);
+}
+.card__body {
+  padding: 40px 40px 80px;
+}
+.card__text {
+  color: #585555;
+  font-size: 20px;
+  line-height: 36px;
+  margin: 0;
+}
+.card__img {
+  width: 120px;
+  border: 5px solid #fff;
+  border-radius: 100%;
+  margin-top: -60px;
+}
+.card__footer {
+  background-color: #686de0;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-bottom: 40px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.card__name {
+  margin: 10px;
+}
+
+a.card__link {
+  text-decoration: none;
+  color: #babcfb;
+  letter-spacing: normal;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-gap: 35px;
+  justify-content: center;
+  margin: 50px auto 50px auto;
+  max-width: 1120px;
+}
+.portfolio__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.35);
+}
+.portfolio__card img {
+  opacity: 1;
+  display: block;
+  border-radius: 20px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: auto;
+  transition: transform 200ms ease-in;
+}
+.portfolio__card:hover img {
+  transform: scale(1.1);
+}
+.portfolio__card:hover .portfolio__content {
+  opacity: 1;
+}
+.portfolio__content {
+  display: flex;
+  background-color: #2D2F61;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 200ms ease-in-out;
+}
+.portfolio__content__button {
+  font-size: 15px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border: none;
+}
+.portfolio__content__button a {
+  color: #585555;
+  text-decoration: none;
+}
+
+.social-media-nav {
+  position: fixed;
+  top: 50%;
+  right: -195px;
+  transform: translateY(-50%);
+  padding: 0;
+  min-width: 250px;
+}
+
+li {
+  padding: 15px 15px 15px 0;
+  text-align: center;
+  transition: transform 0.3s ease-in;
+}
+
+a {
+  color: #fff;
+  text-align: center;
+}
+
+.social-media__blog {
+  background-color: #e17b77;
+  display: flex;
+  align-items: center;
+}
+.social-media__facebook {
+  background-color: #3b5998;
+  display: flex;
+  align-items: center;
+}
+.social-media__twitter {
+  background-color: #00aced;
+  display: flex;
+  align-items: center;
+}
+.social-media__linkedin {
+  background-color: #007bb6;
+  display: flex;
+  align-items: center;
+}
+.social-media__github {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.blog::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+  font-size: 20px;
+  width: 55px;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  padding-right: 15px;
+}
+
+.twitter::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+  font-size: 20px;
+  width: 55px;
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+  padding-right: 15px;
+}
+
+.linkedin::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+  font-size: 20px;
+  width: 55px;
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+  padding-right: 15px;
+}
+
+.facebook::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+  font-size: 20px;
+  width: 55px;
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+
+.github::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+  font-size: 20px;
+  width: 55px;
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+  padding-right: 15px;
+}
+
+li:hover {
+  transform: translateX(calc(-100% + 55px));
+}
+
+@media (max-width: 920px) {
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 20px auto 20px auto;
+  }
+}
+@media (max-width: 760px) {
+  .portfolio {
+    grid-template-columns: 1fr;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  background-color: #c3cfe2;
+  margin-top: 50px;
+}/*# sourceMappingURL=styles.css.map */

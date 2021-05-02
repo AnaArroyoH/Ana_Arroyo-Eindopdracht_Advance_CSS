@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import './variables';
+@import './level-1';
+@import './level-2';
+@import './level-3';
+@import './media-queries';
+
+* {
+	box-sizing: border-box;
+}
+body {
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    background-color: #c3cfe2;
+    margin-top: 50px;
+}
+
+
+

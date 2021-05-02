@@ -1,0 +1,81 @@
+.social-media-nav {
+    position: fixed;
+    top: 50%;
+    right: -195px;
+    transform: translateY(-50%);
+    padding: 0;
+    min-width: 250px;
+}
+
+li {
+	padding: 15px 15px 15px 0;
+    text-align: center;
+    transition: transform .3s ease-in;
+}
+
+a {
+    color: #fff;
+    text-align: center;
+}
+
+.social-media {
+    &__blog {
+        background-color: #e17b77;
+        @include social-media-display ();
+    }
+    &__facebook {
+        background-color: #3b5998;
+        @include social-media-display ();
+    }
+    &__twitter {
+        background-color: #00aced;
+        @include social-media-display ();
+    }
+    &__linkedin {
+        background-color: #007bb6;
+        @include social-media-display ();
+    }
+    &__github {
+        background-color: #333;
+        @include social-media-display ();
+    }
+}
+
+
+.blog::before {
+    @include font-awesome ();
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f5fc";
+    padding-right: $padding-social-media;
+}
+
+.twitter::before {
+    @include font-awesome ();
+    font-family: "Font Awesome 5 Brands"; 
+    content: "\f099";
+    padding-right: $padding-social-media;
+}
+
+.linkedin::before {
+    @include font-awesome ();
+    font-family: "Font Awesome 5 Brands"; 
+    content: "\f0e1";
+    padding-right: $padding-social-media;
+}
+
+.facebook::before {
+    @include font-awesome ();
+    font-family: "Font Awesome 5 Brands"; 
+    content: "\f39e";
+}
+
+.github::before {
+    @include font-awesome ();
+    font-family: "Font Awesome 5 Brands"; 
+    content: "\f09b";
+    padding-right: $padding-social-media;
+}
+
+li:hover {
+    transform: translateX(calc(-100% + 55px));
+}

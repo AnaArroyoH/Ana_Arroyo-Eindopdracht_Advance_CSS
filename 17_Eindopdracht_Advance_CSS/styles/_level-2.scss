@@ -1,0 +1,56 @@
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-gap: 35px;
+    justify-content: center;
+    margin: 50px auto 50px auto;
+    max-width: 1120px;
+    &__card {
+        position:relative;
+        overflow: hidden;
+        border-radius: $rounded-border;
+        box-shadow: $items-shadow; 
+        & img {
+            opacity: 1;
+            display: block;
+            border-radius: $rounded-border;
+            width:100%;
+            object-fit: contain;
+            height: auto;
+            transition: transform 200ms ease-in;
+        }
+    &:hover img {
+        transform: scale(1.1);  
+    } 
+    &:hover .portfolio__content {
+            opacity: 1;
+         }   
+    }
+    &__content {
+        display: flex;
+        background-color: #2D2F61;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity 200ms ease-in-out;
+        &__button {
+            font-size: 15px;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border: none;
+            & a{
+                color: $text-color;
+                text-decoration: none; 
+            }
+        }
+    }
+}
+
